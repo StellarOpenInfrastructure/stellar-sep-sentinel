@@ -1,0 +1,39 @@
+{
+  "name": "stellar-sentinel",
+  "version": "0.1.0",
+  "description": "CLI for automated Stellar SEP and anchor conformance testing.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "clean": "rm -rf dist",
+    "dev": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "@stellar-sep-sentinel/core": "workspace:*",
+    "commander": "^15.0.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.13"
+  },
+  "bin": {
+    "stellar-sentinel": "./dist/main.js"
+  }
+}
