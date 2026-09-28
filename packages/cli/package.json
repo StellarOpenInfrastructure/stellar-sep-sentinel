@@ -31,7 +31,7 @@
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
-    "tsx": "^4.23.13"
+    "tsx": "^4.23.15"
   },
   "bin": {
     "stellar-sentinel": "./dist/main.js"
